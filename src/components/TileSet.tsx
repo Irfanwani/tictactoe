@@ -18,7 +18,7 @@ const TileSet: FC<TilesProps> = ({ tilesx, sel, callback, selection }) => {
     <View style={styles.tileset}>
       {tilesx.map((i) => (
         <TouchableOpacity
-          disabled={sel[`tile${i}`]}
+          disabled={!!sel[`tile${i}`]}
           onPress={() => select(i)}
           key={i}
           style={styles.tile}
